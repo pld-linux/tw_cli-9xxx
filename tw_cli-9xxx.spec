@@ -1,5 +1,6 @@
 %define	model	9550sx
 Summary:	Utility to control 3ware SATA RAID controllers
+Summary(pl.UTF-8):	Narzędzie do sterowania kontrolerami SATA RAID firmy 3ware
 Name:		tw_cli-%{model}
 Version:	9.3.0.7
 Release:	1
@@ -12,7 +13,10 @@ ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Utility to control 3ware SATA RAID controllers
+Utility to control 3ware SATA RAID controllers.
+
+%description -l pl.UTF-8
+Narzędzie do sterowania kontrolerami SATA RAID firmy 3ware.
 
 %prep
 %setup -q -c -T

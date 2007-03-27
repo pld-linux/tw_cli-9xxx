@@ -1,13 +1,13 @@
-%define	model	9550sx
+%define	model	9xxx
 Summary:	Utility to control 3ware SATA RAID controllers
 Summary(pl.UTF-8):	Narzędzie do sterowania kontrolerami SATA RAID firmy 3ware
 Name:		tw_cli-%{model}
-Version:	9.3.0.7
+Version:	9.4.1
 Release:	1
 License:	commercial
 Group:		Base
-Source0:	http://www.3ware.com/download/Escalade9550SX-Series/9.3.0.7/tw_cli-linux-x86_64-%{version}.tgz
-Source1:	http://www.3ware.com/download/Escalade9550SX-Series/9.3.0.7/tw_cli-linux-x86-%{version}.tgz
+Source0:	http://www.3ware.com/download/Escalade9650SE-Series/9.4.1/tw_cli-linux-x86_64-%{version}.tgz
+Source1:	http://www.3ware.com/download/Escalade9650SE-Series/9.4.1/tw_cli-linux-x86-%{version}.tgz
 URL:		http://www.3ware.com/
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

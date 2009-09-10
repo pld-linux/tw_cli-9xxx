@@ -1,4 +1,4 @@
-%define	model	9xxx
+%define		model	9xxx
 Summary:	Utility to control 3ware SATA RAID controllers
 Summary(pl.UTF-8):	Narzędzie do sterowania kontrolerami SATA RAID firmy 3ware
 Name:		tw_cli-%{model}
@@ -32,17 +32,16 @@ tar xf %{SOURCE0}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
-
-install tw_cli $RPM_BUILD_ROOT%{_sbindir}/tw_cli-%{model}
-
-install tw_cli.8.nroff $RPM_BUILD_ROOT%{_mandir}/man8/tw_cli-%{model}.8
+install -p tw_cli $RPM_BUILD_ROOT%{_sbindir}/tw_cli-%{model}
+ln -s tw_cli-%{model} $RPM_BUILD_ROOT%{_sbindir}/tw_cli
+cp -p tw_cli.8.nroff $RPM_BUILD_ROOT%{_mandir}/man8/tw_cli-%{model}.8
+echo '.so tw_cli-%{model}.8' > $RPM_BUILD_ROOT%{_mandir}/man8/tw_cli.8
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_sbindir}/*
-%{_mandir}/man?/*
+%attr(755,root,root) %{_sbindir}/tw_cli*
+%{_mandir}/man8/tw_cli*

@@ -12,6 +12,9 @@ URL:		http://www.3ware.com/
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# binary already stripped
+%define		_enable_debug_packages	0
+
 %description
 Utility to control 3ware SATA RAID controllers.
 

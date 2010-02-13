@@ -2,7 +2,7 @@
 Summary:	Utility to control 3ware SATA RAID controllers
 Summary(pl.UTF-8):	Narzędzie do sterowania kontrolerami SATA RAID firmy 3ware
 Name:		tw_cli-%{model}
-Version:	9.5.1
+Version:	9.5.3
 Release:	1
 License:	commercial
 Group:		Base
